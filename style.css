@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;500&display=swap');
+
+:root{--paper:#f5f1e7;--ink:#25241f;--muted:#716d63;--line:#d9d3c6;--white:#fff;--hand:'Shantell Sans','Comic Sans MS',cursive}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:30px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:7px}
+a,button{-webkit-tap-highlight-color:transparent}
+::selection{background:#ded5be}
+.wrap{width:min(1180px,calc(100% - 96px));margin-inline:auto}
+.skip{position:fixed;top:-80px;left:20px;padding:10px;background:var(--white);z-index:10}
+.skip:focus{top:10px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:29px 0;border-bottom:1px solid var(--line)}
+.wordmark{font-size:17px;font-weight:600;letter-spacing:-.6px;min-height:44px;display:flex;align-items:center}
+.nav{display:flex;gap:31px;align-items:center}
+.nav a{font-size:13px;min-height:44px;display:flex;align-items:center;position:relative}
+.nav a:after{content:'';position:absolute;left:0;right:0;bottom:7px;border-bottom:1px solid;transform:scaleX(0);transform-origin:left;transition:transform .2s}
+.nav a:hover:after{transform:scaleX(1)}
+.hero{padding:92px 0 87px}
+.hero-name{display:flex;align-items:baseline;flex-wrap:wrap;column-gap:30px}
+.hero h1{font-size:clamp(66px,10.6vw,146px);font-weight:400;letter-spacing:-.075em;line-height:1.04;margin:0}
+.chinese{font-family:serif;font-size:23px;color:#9b9588;letter-spacing:.16em}
+.roles{font-size:14px;letter-spacing:.035em;margin:29px 0 0;color:var(--muted)}
+.hero-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:67px}
+.hand{font-family:var(--hand);font-weight:400}
+.hero-note{font-size:17px;transform:rotate(-3deg);margin:0}
+.scroll-note{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:15px}
+.arrow{font-size:23px;font-weight:400;display:inline-block;transition:transform .2s}
+.section{padding:42px 0 78px;border-top:1px solid var(--line)}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:34px}
+.section-title{display:flex;align-items:baseline;gap:20px}
+.section h2{font-family:var(--hand);font-size:42px;line-height:1.2;font-weight:500;letter-spacing:-1.5px;margin:0}
+.section-number{font-size:11px;color:var(--muted);letter-spacing:.08em}
+.section-description{font-size:12px;color:var(--muted);margin:0}
+.grid{display:grid;gap:30px}
+.grid.two{grid-template-columns:1fr 1fr}
+.grid.three{grid-template-columns:repeat(3,1fr)}
+.project{display:block;min-width:0}
+.placeholder{background:var(--white);display:flex;align-items:center;justify-content:center;text-align:center;aspect-ratio:1.28;padding:25px;position:relative;transition:transform .22s}
+.placeholder-content{max-width:290px}
+.placeholder .slot{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#827b70;margin-bottom:14px}
+.placeholder strong{font-size:16px;font-weight:400;color:#706b62;display:block}
+.placeholder small{display:block;font-size:12px;color:#777168;margin-top:8px;line-height:1.7}
+.project:hover .placeholder{transform:translateY(-5px)}
+.project:hover .arrow{transform:translate(3px,-3px)}
+.project-info{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:18px}
+.project-title{font-size:17px;font-weight:400;letter-spacing:-.35px;margin:0}
+.project-category{font-size:11px;letter-spacing:.025em;color:var(--muted);margin:4px 0 0}
+.grid.three .project-title{font-size:16px}
+.footer{border-top:1px solid var(--line);padding:30px 0 38px;display:flex;justify-content:space-between;align-items:center;gap:22px;font-size:11px;color:var(--muted)}
+.footer-note{font-family:var(--hand);font-size:15px;color:var(--ink)}
+.detail-head{padding:55px 0 46px}
+.breadcrumb{font-size:12px;color:var(--muted);min-height:44px;display:inline-flex;align-items:center;gap:12px}
+.detail-kicker{font-family:var(--hand);font-size:16px;margin:35px 0 14px}
+.detail-head h1{font-size:clamp(42px,6.5vw,82px);letter-spacing:-.06em;font-weight:400;line-height:1.08;margin:0;max-width:950px}
+.detail-subtitle{font-size:14px;color:var(--muted);margin-top:22px}
+.detail-main{aspect-ratio:1.75}
+.project-description{display:grid;grid-template-columns:1fr 2fr;gap:70px;padding:52px 0 60px}
+.metadata{font-size:12px}
+.metadata div{display:grid;grid-template-columns:80px 1fr;gap:15px;padding:10px 0;border-bottom:1px solid var(--line)}
+.metadata dt{color:var(--muted)}
+.metadata dd{margin:0}
+.copy h2{font-family:var(--hand);font-weight:400;font-size:25px;margin:4px 0 15px}
+.copy p{font-size:15px;max-width:600px;margin:0;color:var(--muted)}
+.detail-slots{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:0 0 65px}
+.detail-slots .placeholder{aspect-ratio:1.15}
+.next-project{border-top:1px solid var(--line);padding:35px 0 55px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.next-label{font-size:11px;color:var(--muted);display:block;margin-bottom:6px}
+.next-title{font-family:var(--hand);font-size:25px}
+.draft-note{font-size:12px;color:var(--muted);margin:0 0 35px;max-width:700px}
+
+@media(min-width:1500px){.hero{padding-top:110px}
+}
+@media(max-width:850px){.wrap{width:calc(100% - 56px)}
+.grid.three{grid-template-columns:1fr 1fr}
+.hero{padding:70px 0}
+.section-description{max-width:170px;text-align:right}
+.project-description{gap:35px;grid-template-columns:1fr 1.6fr}
+.hero h1{font-size:100px}
+.chinese{font-size:20px}
+}
+
+@media(max-width:560px){.wrap{width:calc(100% - 40px)}
+.topbar{padding:17px 0;gap:16px}
+.nav{gap:19px}
+.nav a{font-size:12px}
+.hero{padding:57px 0 50px}
+.hero h1{font-size:clamp(58px,15vw,84px)}
+.hero-name{gap:15px}
+.chinese{font-size:17px;margin-top:15px}
+.roles{font-size:12px;margin-top:21px;max-width:260px;line-height:1.9}
+.hero-bottom{margin-top:43px}
+.hero-note{font-size:15px}
+.scroll-note{font-size:10px}
+.section{padding:30px 0 48px}
+.section h2{font-size:32px}
+.section-head{align-items:flex-start;margin-bottom:26px}
+.section-title{gap:10px}
+.section-description{max-width:125px;font-size:10px;padding-top:5px}
+.grid.two,.grid.three{grid-template-columns:1fr;gap:35px}
+.placeholder{aspect-ratio:1.3}
+.project-info{margin-top:13px}
+.footer{align-items:flex-start;font-size:10px;padding-top:24px}
+.footer-note{font-size:13px}
+.detail-head{padding-top:30px}
+.detail-kicker{margin-top:25px}
+.detail-main{aspect-ratio:1.15}
+.project-description{grid-template-columns:1fr;gap:28px;padding:30px 0 38px}
+.metadata{margin:0}
+.detail-slots{grid-template-columns:1fr;gap:20px;margin-bottom:40px}
+.detail-slots .placeholder{aspect-ratio:1.3}
+.next-title{font-size:20px}
+.next-project{padding:27px 0 35px}
+}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+*,*:before,*:after{transition:none!important;animation:none!important}
+}
+
+
+/* Approved EV homepage art. Multiply blends white JPEG paper into cream
+   without editing the user's original artwork. Contain preserves the full drawing. */
+.project-art{aspect-ratio:1.28;display:flex;align-items:center;justify-content:center;background:var(--paper);padding:16px;transition:transform .22s}
+
+.project-art img{display:block;width:100%;height:100%;min-height:0;object-fit:contain;mix-blend-mode:multiply}
+
+.project:hover .project-art{transform:translateY(-5px)}
+
+@media(max-width:560px){.project-art{aspect-ratio:1.3;padding:12px}
+}
+
+@media(prefers-reduced-motion:reduce){.project-art{transition:none}
+}
+
+
+/* v2: local handwritten names, larger Chinese name, brand logo and videos. */
+@font-face{font-family:'Ada Hand';src:url('fonts/ada-hand.woff2');font-display:swap;font-weight:400}
+@font-face{font-family:'Yuexin Hand';src:url('fonts/zhang-hand.woff2');font-display:swap;font-weight:400}
+.hero h1{font-family:'Ada Hand',var(--hand);font-size:clamp(72px,10.3vw,140px);font-weight:400;letter-spacing:-.045em;line-height:1.2}
+.chinese{font-family:'Yuexin Hand',serif;font-size:clamp(32px,3.6vw,49px);letter-spacing:.06em;color:#8d877b}
+.hero-name{column-gap:38px;row-gap:8px}
+.hero-bottom{justify-content:flex-end;margin-top:40px}
+.brand-logo{display:block;width:110px;height:83px;object-fit:contain}
+.video-story{margin-bottom:65px}
+.video-story video,.course-video video{display:block;width:100%;max-height:740px;background:#191917;object-fit:contain}
+.video-story video{aspect-ratio:16/9}
+.course-video video{max-height:760px}
+.story-caption{display:grid;grid-template-columns:45px 1fr;gap:20px;max-width:800px;margin-top:27px}
+.story-number{font-size:12px;color:var(--muted);padding-top:8px}
+.story-caption h2{font-family:var(--hand);font-weight:400;font-size:27px;margin:0 0 12px}
+.story-caption p{font-size:15px;line-height:1.8;color:var(--muted);margin:0}
+.instagram-note{font-size:13px;color:var(--muted);margin:0 0 50px}
+.instagram-note a{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:560px){.nav{gap:13px}.nav a{font-size:11px}.wordmark{font-size:15px;white-space:nowrap}.topbar{gap:10px}.hero h1{font-size:clamp(57px,14vw,78px)}.chinese{font-size:34px;margin-top:0}.hero-name{column-gap:20px}.hero-bottom{margin-top:24px}.brand-logo{width:85px;height:64px}.story-caption{grid-template-columns:25px 1fr;gap:12px}.story-caption h2{font-size:23px}.video-story{margin-bottom:45px}}
+
+/* v3: supplied project media and completed project descriptions */
+.process-heading{margin-top:32px!important}.copy p{line-height:1.85}
+.project-figure{margin:0 0 42px}.project-figure img{display:block;width:100%;height:auto;object-fit:contain}.project-figure figcaption{font-size:12px;color:var(--muted);margin-top:12px}.project-figure a{text-decoration:underline;text-underline-offset:4px}
+.ballet-still{max-width:800px;margin:0 auto 60px}.course-video video{background:var(--paper);max-height:800px;object-fit:contain}
+.audio-panel{background:var(--white);padding:clamp(25px,6vw,75px);margin-bottom:10px}.audio-panel h2{font-family:var(--hand);font-size:clamp(26px,4vw,45px);font-weight:400;line-height:1.25;margin:20px 0}.audio-panel p{max-width:550px;font-size:15px;color:var(--muted)}.audio-panel .audio-label{font-size:11px;letter-spacing:.12em}.audio-panel audio{display:block;width:100%;margin-top:35px}
+.portfolio-cover img{mix-blend-mode:normal}.portfolio-cover{padding:0}.portfolio-cover img{object-fit:contain}.jewelry-gallery{margin-bottom:55px}
+
+/* v4: sound cover and complete jewelry board as the large opening image. */
+.sound-cover{max-width:680px;margin:0 auto 40px}.sound-cover img{mix-blend-mode:multiply}
+.jewelry-hero{width:100%;margin-bottom:45px}.jewelry-hero img{width:100%;height:auto;max-height:none;object-fit:contain}
+
+/* v6: regular Chinese name; left Instagram; autumn collection. */
+.chinese{font-family:'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif;font-weight:400;font-size:clamp(30px,3.2vw,43px);letter-spacing:.08em}
+.nav .instagram-link{font-size:16px;font-weight:500}.nav{justify-content:flex-start}.footer{flex-wrap:wrap}.footer a{min-height:44px;display:inline-flex;align-items:center}
+.autumn-display{max-width:850px;margin-inline:auto}.sticker-sheet{max-width:900px;margin-inline:auto}.gallery-heading{font-family:var(--hand);font-size:28px;font-weight:400;margin:15px 0 25px}.photo-scenes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.photo-scenes img{aspect-ratio:2/3;object-fit:contain;background:white}.left-aligned,.instagram-note{text-align:left;margin-left:0}.video-story video{margin-left:0}
+@media(max-width:560px){.chinese{font-size:32px}.nav .instagram-link{font-size:13px}.nav{gap:12px}.photo-scenes{grid-template-columns:1fr}.photo-scenes img{aspect-ratio:auto}.footer{gap:10px 20px}}
